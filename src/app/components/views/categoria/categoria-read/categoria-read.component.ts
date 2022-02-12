@@ -9,7 +9,7 @@ import { Categoria } from './../categoria.model';
   styleUrls: ['./categoria-read.component.css'],
 })
 export class CategoriaReadComponent implements OnInit {
-  displayedColumns: string[] = ['id', 'nome', 'descricao', 'acoes'];
+  displayedColumns: string[] = ['id', 'nome', 'descricao', 'livros', 'acoes'];
   categorias: Categoria[] = [];
   categorias$: Observable<Categoria[]> = this.service.findAll();
 
