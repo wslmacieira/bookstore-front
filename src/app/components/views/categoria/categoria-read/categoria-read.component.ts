@@ -10,18 +10,9 @@ import { Categoria } from './../categoria.model';
 })
 export class CategoriaReadComponent implements OnInit {
   displayedColumns: string[] = ['id', 'nome', 'descricao', 'livros', 'acoes'];
-  categorias: Categoria[] = [];
   categorias$: Observable<Categoria[]> = this.service.findAll();
 
   constructor(private service: CategoriaService) {}
 
-  ngOnInit(): void {
-    // this.findAll();
-  }
-
-  // findAll(): void {
-  //   this.service.findAll().subscribe((resposta) => {
-  //     this.categorias = resposta;
-  //   });
-  // }
+  ngOnInit(): void {}
 }
