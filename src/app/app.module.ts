@@ -20,10 +20,11 @@ import { FooterComponent } from './components/template/footer/footer.component';
 import { HeaderComponent } from './components/template/header/header.component';
 import { NavComponent } from './components/template/nav/nav.component';
 import { CategoriaCreateComponent } from './components/views/categoria/categoria-create/categoria-create.component';
-import { CategoriaReadComponent } from './components/views/categoria/categoria-read/categoria-read.component';
-import { HomeComponent } from './components/views/home/home.component';
 import { CategoriaDeleteComponent } from './components/views/categoria/categoria-delete/categoria-delete.component';
+import { CategoriaReadComponent } from './components/views/categoria/categoria-read/categoria-read.component';
 import { CategoriaUpdateComponent } from './components/views/categoria/categoria-update/categoria-update.component';
+import { HomeComponent } from './components/views/home/home.component';
+import { LivroReadComponent } from './components/views/livro/livro-read/livro-read.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { CategoriaUpdateComponent } from './components/views/categoria/categoria
     CategoriaCreateComponent,
     CategoriaDeleteComponent,
     CategoriaUpdateComponent,
+    LivroReadComponent,
   ],
   imports: [
     BrowserModule,
