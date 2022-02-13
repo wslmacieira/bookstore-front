@@ -4,7 +4,7 @@
   </div>
 
   <button
-    routerLink="/categorias/create"
+    [routerLink]="['create']"
     class="mat-elevation-z8"
     mat-stroked-button
     color="primary"
@@ -52,7 +52,11 @@
           <a href="#" class="edit">
             <i class="material-icons">edit</i>
           </a>
-          <a href="#" class="delete">
+          <a
+            [routerLink]="['delete', row.id]"
+            [state]="{ categoria: row }"
+            class="delete"
+          >
             <i class="material-icons">delete</i>
           </a>
         </td>
