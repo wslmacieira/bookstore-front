@@ -1,14 +1,14 @@
 <form>
-  <h1>DELETANDO CATEGORIA</h1>
+  <h1>UPDATE CATEGORIA</h1>
 
   <mat-form-field class="form" appearance="fill">
     <mat-label>Nome</mat-label>
     <input
-      matInput
       [(ngModel)]="categoria.nome"
+      matInput
       type="text"
       name="nome"
-      disabled
+      placeholder="Ex. Computação"
     />
   </mat-form-field>
   <mat-form-field class="form" appearance="fill">
@@ -18,24 +18,24 @@
       [(ngModel)]="categoria.descricao"
       type="text"
       name="descricao"
-      disabled
+      placeholder="Ex. Livros Computação"
     ></textarea>
   </mat-form-field>
 
   <div class="buttons">
     <button
-      (click)="delete()"
       class="mat-elevation-z8"
       mat-stroked-button
       color="primary"
+      (click)="update()"
     >
-      DELETAR
+      CRIAR
     </button>
     <button
-      (click)="cancel()"
       class="mat-elevation-z8"
       mat-stroked-button
       color="warn"
+      (click)="cancel()"
       type="button"
     >
       CANCELAR

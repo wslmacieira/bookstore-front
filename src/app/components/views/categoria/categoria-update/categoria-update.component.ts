@@ -4,12 +4,13 @@ import { CategoriaService } from '../categoria.service';
 import { Categoria } from './../categoria.model';
 
 @Component({
-  selector: 'app-categoria-delete',
-  templateUrl: './categoria-delete.component.html',
-  styleUrls: ['./categoria-delete.component.css'],
+  selector: 'app-categoria-update',
+  templateUrl: './categoria-update.component.html',
+  styleUrls: ['./categoria-update.component.css'],
 })
-export class CategoriaDeleteComponent implements OnInit {
+export class CategoriaUpdateComponent implements OnInit {
   categoria: Categoria = {} as Categoria;
+
   constructor(
     private service: CategoriaService,
     private route: ActivatedRoute,
@@ -31,15 +32,17 @@ export class CategoriaDeleteComponent implements OnInit {
     });
   }
 
-  delete(): void {
-    const res = this.service.delete(this.categoria.id!).subscribe({
+  update() {
+    this.service.update(this.categoria).subscribe({
       next: () => {
-        // this.router.navigate(['categorias']);
         this.service.mensagem('Categoria deletada com sucesso!');
+        this.router.navigate(['categorias']);
       },
-      error: (e) => this.service.mensagem(e.error.error),
+      error: (e) =>
+        this.service.mensagem(
+          'validar se todos os campos estão preenchidos corretamente!'
+        ),
     });
-    console.log(res);
   }
 
   cancel(): void {
