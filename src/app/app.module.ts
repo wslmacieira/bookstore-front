@@ -1,6 +1,6 @@
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -24,6 +24,7 @@ import { CategoriaDeleteComponent } from './components/views/categoria/categoria
 import { CategoriaReadComponent } from './components/views/categoria/categoria-read/categoria-read.component';
 import { CategoriaUpdateComponent } from './components/views/categoria/categoria-update/categoria-update.component';
 import { HomeComponent } from './components/views/home/home.component';
+import { LivroCreateComponent } from './components/views/livro/livro-create/livro-create.component';
 import { LivroReadComponent } from './components/views/livro/livro-read/livro-read.component';
 
 @NgModule({
@@ -38,6 +39,7 @@ import { LivroReadComponent } from './components/views/livro/livro-read/livro-re
     CategoriaDeleteComponent,
     CategoriaUpdateComponent,
     LivroReadComponent,
+    LivroCreateComponent,
   ],
   imports: [
     BrowserModule,
@@ -56,6 +58,7 @@ import { LivroReadComponent } from './components/views/livro/livro-read/livro-re
     MatInputModule,
     MatFormFieldModule,
     MatSnackBarModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
