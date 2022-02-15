@@ -39,7 +39,6 @@ export class CategoriaDeleteComponent implements OnInit {
       },
       error: (e) => this.service.mensagem(e.error.error),
     });
-    console.log(res);
   }
 
   cancel(): void {
