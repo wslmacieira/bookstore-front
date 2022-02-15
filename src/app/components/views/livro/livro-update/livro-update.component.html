@@ -1,5 +1,5 @@
 <form>
-  <h1>CRIANDO NOVO LIVRO</h1>
+  <h1>ATUALIZANDO LIVRO</h1>
 
   <mat-form-field class="form" appearance="fill">
     <mat-label>Titulo</mat-label>
@@ -48,13 +48,13 @@
 
   <div class="buttons">
     <button
-      (click)="create()"
+      (click)="update()"
       [disabled]="getMessage()"
       class="mat-elevation-z8"
       mat-stroked-button
       color="primary"
     >
-      CRIAR
+      ATUALIZAR
     </button>
     <button
       (click)="cancel()"
